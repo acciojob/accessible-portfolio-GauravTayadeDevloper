@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Jane Doe — Accessible Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Linked CSS file -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <!-- Navigation with ARIA role -->
+  <nav role="navigation" aria-label="Primary">
+    <ul role="list" class="nav-list">
+      <li role="listitem"><a href="#about">About</a></li>
+      <li role="listitem"><a href="#projects">Projects</a></li>
+      <li role="listitem"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
+  <header class="hero">
+    <!-- Heading with ARIA role -->
+    <h1 role="heading" aria-level="1">Jane Doe</h1>
+    <!-- Image with ARIA role and alt text -->
+    <img role="img" src="profile.jpg" alt="Portrait of Jane Doe smiling" class="hero-img" />
+    <p id="about" class="tagline">
+      Front-end developer focused on accessible, inclusive user experiences.
+    </p>
+  </header>
+
+  <main id="projects" class="content">
+    <h2>Highlighted Skills</h2>
+    <!-- List with ARIA roles -->
+    <ul role="list" class="skills">
+      <li role="listitem">Semantic HTML & ARIA</li>
+      <li role="listitem">Responsive CSS & Flexbox/Grid</li>
+      <li role="listitem">JavaScript & Accessibility Testing</li>
+    </ul>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>
+      For more information on ARIA roles,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles" target="_blank" rel="noopener noreferrer">
+        click here
+      </a>.
+    </p>
+  </footer>
 </body>
-
 </html>
